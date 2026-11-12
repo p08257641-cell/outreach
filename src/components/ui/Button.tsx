@@ -13,13 +13,13 @@ interface PrimaryButtonProps {
 }
 
 const common =
-  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-[background-color,color,box-shadow,transform,border-color] duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#713BFF] disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:transform-none";
+  "inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition-[background-color,color,box-shadow,transform,border-color] duration-300 motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clear-sky disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:transform-none";
 
 const primary =
-  "bg-[#713BFF] text-white shadow-[0_10px_28px_rgba(113,59,255,0.24)] hover:bg-[#8257FF] hover:shadow-[0_16px_36px_rgba(113,59,255,0.30)]";
+  "bg-clear-sky text-white shadow-[0_10px_28px_rgba(54,117,226,0.24)] hover:bg-clear-sky-600 hover:shadow-[0_16px_36px_rgba(54,117,226,0.30)]";
 
 const secondary =
-  "border border-[#DCD5EF] bg-white text-[#170D2E] hover:border-[#713BFF] hover:bg-[#F5F3FF] hover:text-[#713BFF]";
+  "border border-blue-smoke-200 bg-white text-blue-smoke-900 hover:border-clear-sky hover:bg-blue-smoke-50 hover:text-clear-sky-600";
 
 function ButtonContent({
   children,

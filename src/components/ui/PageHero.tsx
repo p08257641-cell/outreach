@@ -39,21 +39,21 @@ export default function PageHero({
 
       <div
         className={cn(
-          "container-wide relative z-10 py-20 sm:py-24 lg:py-32",
+          "container-wide relative z-10 py-14 sm:py-24 lg:py-32",
           align === "center" && "text-center"
         )}
       >
         <div className={cn("max-w-2xl", align === "center" && "mx-auto")}>
           {eyebrow && (
-            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gold-400 animate-fade-up">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold-400 animate-fade-up sm:mb-4 sm:text-sm">
               {eyebrow}
             </p>
           )}
-          <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl animate-fade-up text-balance">
+          <h1 className="text-3xl font-bold text-white min-[400px]:text-4xl sm:text-5xl lg:text-6xl animate-fade-up text-balance">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-6 text-lg leading-relaxed text-navy-100 animate-fade-up sm:text-xl">
+            <p className="mt-4 text-base leading-relaxed text-navy-100 animate-fade-up sm:mt-6 sm:text-xl">
               {subtitle}
             </p>
           )}

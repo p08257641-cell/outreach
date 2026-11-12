@@ -27,7 +27,7 @@ export default function TestimonialsCarousel({ testimonials }: { testimonials: T
     <div className="relative">
       <TestimonialCard testimonial={current} featured />
 
-      <div className="mt-6 flex items-center justify-center gap-4">
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-3 sm:mt-6 sm:gap-4">
         <button
           type="button"
           onClick={prev}

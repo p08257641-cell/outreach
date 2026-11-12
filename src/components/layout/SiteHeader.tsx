@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -155,13 +154,13 @@ export default function SiteHeader() {
             alt="Ephesus School Outreach"
             width={180}
             height={64}
-            className="h-12 w-auto max-w-[180px] object-contain sm:h-14 lg:h-16"
+            className="h-10 w-auto max-w-[145px] object-contain sm:h-12 sm:max-w-[170px] lg:h-12 lg:max-w-[155px] xl:h-16 xl:max-w-[180px]"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-0.5 lg:flex xl:gap-1"
           aria-label="Main navigation"
         >
           {mainNav.map((item) => (
@@ -175,10 +174,10 @@ export default function SiteHeader() {
                 isActive(item.to) ? "page" : undefined
               }
               className={cn(
-                "rounded-lg px-3 py-2 text-sm font-medium transition-colors duration-200 hover:text-royal-600",
+                "whitespace-nowrap rounded-lg px-2 py-2 text-sm font-medium transition-colors duration-200 hover:text-clear-sky-600 xl:px-3",
                 isActive(item.to)
-                  ? "font-semibold text-royal-600"
-                  : "text-navy-700"
+                  ? "font-semibold text-clear-sky-600"
+                  : "text-blue-smoke-700"
               )}
             >
               {item.label}
@@ -191,7 +190,7 @@ export default function SiteHeader() {
             onClick={(event) =>
               handleNavigation(event, ctaNav.to)
             }
-            className="ml-2 inline-flex items-center gap-2 rounded-full bg-royal-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-royal-600 active:scale-[0.98]"
+            className="ml-1.5 inline-flex shrink-0 whitespace-nowrap items-center gap-2 rounded-full bg-clear-sky px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-clear-sky-600 active:scale-[0.98] xl:ml-2 xl:px-5"
           >
             {ctaNav.label}
           </Link>

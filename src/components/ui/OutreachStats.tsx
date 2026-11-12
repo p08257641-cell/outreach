@@ -42,19 +42,19 @@ function Counter({ value }: { value: number }) {
 export default function OutreachStats() {
   const reducedMotion = useReducedMotion();
   return (
-    <section id="impact" aria-labelledby="outreach-impact-title" className="scroll-mt-24 bg-white py-20 sm:py-24 lg:py-28">
+    <section id="impact" aria-labelledby="outreach-impact-title" className="scroll-mt-24 bg-white py-16 sm:py-24 lg:py-28">
       <div className="container-wide">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#713BFF]">Our Outreach Impact</p>
-          <h2 id="outreach-impact-title" className="mt-4 text-balance text-4xl font-black leading-[1.1] tracking-[-0.045em] text-[#170D2E] sm:text-5xl">Ephesus Gatherings <span className="text-[#713BFF]">Outreach Program.</span></h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#625D70]">Ephesus Gatherings Outreach Unit is a ministry wing of Ephesus Gatherings Worldwide responsible for reaching people. Over the past two years, by the grace of God, this program has reached many people and won souls for the Lord.</p>
+          <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-clear-sky-600">Our Outreach Impact</p>
+          <h2 id="outreach-impact-title" className="mt-4 text-balance text-3xl font-black leading-[1.1] tracking-[-0.045em] text-blue-smoke-900 min-[400px]:text-4xl sm:text-5xl">Ephesus Gatherings <span className="text-clear-sky">Outreach Program.</span></h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-ink-light sm:mt-6 sm:leading-8">Ephesus Gatherings Outreach Unit is a ministry wing of Ephesus Gatherings Worldwide responsible for reaching people. Over the past two years, by the grace of God, this program has reached many people and won souls for the Lord.</p>
         </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 min-[420px]:grid-cols-2 sm:mt-12 sm:gap-5 lg:grid-cols-4">
           {stats.map((stat, index) => (
-            <motion.div key={stat.label} initial={reducedMotion ? false : { opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6, delay: reducedMotion ? 0 : index * 0.08 }} className="rounded-[24px] border border-[#EAE6F4] bg-[#FAF9FF] p-7 text-center shadow-[0_8px_30px_rgba(23,13,46,0.05)]">
-              <div className="text-4xl font-black tracking-tight text-[#713BFF] sm:text-5xl"><Counter value={stat.value}/></div>
-              <h3 className="mt-4 text-base font-extrabold text-[#170D2E]">{stat.label}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#625D70]">{stat.description}</p>
+            <motion.div key={stat.label} initial={reducedMotion ? false : { opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.6, delay: reducedMotion ? 0 : index * 0.08 }} className="rounded-[24px] border border-blue-smoke-100 bg-blue-smoke-50/70 p-5 text-center shadow-[0_8px_30px_rgba(14,58,134,0.05)] sm:p-7">
+              <div className="text-3xl font-black tracking-tight text-clear-sky-600 min-[400px]:text-4xl sm:text-5xl"><Counter value={stat.value}/></div>
+              <h3 className="mt-4 text-base font-extrabold text-blue-smoke-900">{stat.label}</h3>
+              <p className="mt-2 text-sm leading-6 text-ink-light">{stat.description}</p>
             </motion.div>
           ))}
         </div>

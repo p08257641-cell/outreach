@@ -1,4 +1,3 @@
-
 import { motion, useReducedMotion } from "motion/react";
 import {
   CalendarDays,
@@ -18,12 +17,12 @@ export default function UpcomingEventsSection() {
     <section
       id="events"
       aria-labelledby="events-title"
-      className="scroll-mt-24 bg-[#F5F3FF] py-20 sm:py-24 lg:py-28"
+      className="scroll-mt-24 bg-blue-smoke-50 py-16 sm:py-24 lg:py-28"
     >
       <div className="container-wide">
         <div className="mx-auto max-w-3xl text-center">
           <AnimatedText>
-            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#713BFF]">
+            <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-clear-sky-600">
               Stay Connected
             </p>
           </AnimatedText>
@@ -31,14 +30,14 @@ export default function UpcomingEventsSection() {
           <AnimatedText delay={0.08}>
             <h2
               id="events-title"
-              className="mt-4 text-4xl font-black tracking-[-0.045em] text-[#170D2E] sm:text-5xl"
+              className="mt-4 text-3xl font-black tracking-[-0.045em] text-blue-smoke-900 min-[400px]:text-4xl sm:text-5xl"
             >
               Upcoming{" "}
-              <span className="text-[#713BFF]">Events.</span>
+              <span className="text-clear-sky">Events.</span>
             </h2>
           </AnimatedText>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#625D70]">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-ink-light">
             Join us for meaningful gatherings, school outreach
             programs, and opportunities to grow in faith.
           </p>
@@ -60,9 +59,9 @@ export default function UpcomingEventsSection() {
                   duration: 0.65,
                   delay: reducedMotion ? 0 : index * 0.1,
                 }}
-                className="group flex h-full flex-col overflow-hidden rounded-[26px] border border-[#EAE6F4] bg-white shadow-[0_8px_30px_rgba(23,13,46,0.05)] transition-shadow duration-300 hover:shadow-[0_20px_55px_rgba(23,13,46,0.12)]"
+                className="group flex h-full flex-col overflow-hidden rounded-[26px] border border-blue-smoke-100 bg-white shadow-[0_8px_30px_rgba(14,58,134,0.05)] transition-shadow duration-300 hover:shadow-[0_20px_55px_rgba(14,58,134,0.12)]"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#170D2E]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-blue-smoke-900">
                   <img
                     src={event.image}
                     alt={`${event.title} event poster`}
@@ -70,36 +69,36 @@ export default function UpcomingEventsSection() {
                     className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-105"
                   />
 
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#170D2E]/45 to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-blue-smoke-950/45 to-transparent" />
 
-                  <span className="absolute left-5 top-5 rounded-full bg-[#D7FF35] px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-[#170D2E]">
+                  <span className="absolute left-5 top-5 rounded-full bg-fresh-yellow px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-blue-smoke-950">
                     Upcoming
                   </span>
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-extrabold tracking-tight text-[#170D2E]">
+                  <h3 className="text-xl font-extrabold tracking-tight text-blue-smoke-900">
                     {event.title}
                   </h3>
 
-                  <div className="mt-5 space-y-3 text-sm text-[#625D70]">
+                  <div className="mt-5 space-y-3 text-sm text-ink-light">
                     <p className="flex items-center gap-3">
-                      <CalendarDays className="h-4 w-4 shrink-0 text-[#713BFF]" />
+                      <CalendarDays className="h-4 w-4 shrink-0 text-clear-sky-600" />
                       {event.date}
                     </p>
 
                     <p className="flex items-center gap-3">
-                      <Clock3 className="h-4 w-4 shrink-0 text-[#713BFF]" />
+                      <Clock3 className="h-4 w-4 shrink-0 text-clear-sky-600" />
                       {event.time}
                     </p>
 
                     <p className="flex items-center gap-3">
-                      <MapPin className="h-4 w-4 shrink-0 text-[#713BFF]" />
+                      <MapPin className="h-4 w-4 shrink-0 text-clear-sky-600" />
                       {event.location}
                     </p>
                   </div>
 
-                  <p className="mt-5 flex-1 text-sm leading-7 text-[#625D70]">
+                  <p className="mt-5 flex-1 text-sm leading-7 text-ink-light">
                     {event.description}
                   </p>
 
@@ -115,7 +114,7 @@ export default function UpcomingEventsSection() {
                         ? "noopener noreferrer"
                         : undefined
                     }
-                    className="mt-7 inline-flex items-center justify-between gap-3 rounded-full bg-[#713BFF] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#8257FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#713BFF]"
+                    className="mt-7 inline-flex items-center justify-between gap-3 rounded-full bg-clear-sky px-6 py-3.5 text-sm font-bold text-white transition hover:bg-clear-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-clear-sky"
                   >
                     {event.registrationUrl
                       ? "Register / Learn More"
@@ -128,14 +127,14 @@ export default function UpcomingEventsSection() {
             ))}
           </div>
         ) : (
-          <div className="mx-auto mt-12 max-w-2xl rounded-[26px] border border-[#EAE6F4] bg-white px-8 py-12 text-center shadow-sm">
-            <CalendarDays className="mx-auto h-10 w-10 text-[#713BFF]" />
+          <div className="mx-auto mt-10 max-w-2xl rounded-[26px] border border-blue-smoke-100 bg-white px-5 py-10 text-center shadow-sm sm:mt-12 sm:px-8 sm:py-12">
+            <CalendarDays className="mx-auto h-10 w-10 text-clear-sky-600" />
 
-            <h3 className="mt-5 text-2xl font-extrabold text-[#170D2E]">
+            <h3 className="mt-5 text-2xl font-extrabold text-blue-smoke-900">
               New Events Coming Soon
             </h3>
 
-            <p className="mx-auto mt-4 max-w-md leading-7 text-[#625D70]">
+            <p className="mx-auto mt-4 max-w-md leading-7 text-ink-light">
               We are preparing more opportunities to connect,
               serve, and make a difference. Get in touch to
               learn about upcoming activities.
@@ -143,7 +142,7 @@ export default function UpcomingEventsSection() {
 
             <a
               href="#contact"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#713BFF] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#8257FF]"
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-clear-sky px-7 py-3.5 text-sm font-bold text-white transition hover:bg-clear-sky-600"
             >
               Contact Our Team
               <ArrowRight className="h-4 w-4" />

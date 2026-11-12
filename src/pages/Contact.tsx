@@ -30,11 +30,11 @@ export default function Contact() {
               subtitle="Use any of the methods below to connect with us."
               align="center"
             />
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <ContactCard />
             </div>
 
-            <div className="mt-12 rounded-2xl bg-cloud p-8 text-center">
+            <div className="mt-10 rounded-2xl bg-cloud p-6 text-center sm:mt-12 sm:p-8">
               <h3 className="text-xl font-bold text-navy-800">Connect With Us</h3>
               <p className="mt-3 text-ink-light">
                 Follow us on social media to stay updated on our outreach activities and events.

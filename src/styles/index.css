@@ -5,11 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-white text-ink font-sans antialiased;
     line-height: 1.6;
+    overflow-x: clip;
   }
 
   h1,
@@ -18,27 +20,27 @@
   h4,
   h5,
   h6 {
-    @apply font-heading text-navy-800;
+    @apply font-heading text-blue-smoke;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }
 
   ::selection {
-    @apply bg-gold-200 text-navy-900;
+    @apply bg-fresh-yellow-200 text-blue-smoke-900;
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-royal-500 ring-offset-2 ring-offset-white rounded-sm;
+    @apply outline-none ring-2 ring-clear-sky ring-offset-2 ring-offset-white rounded-sm;
   }
 }
 
 @layer components {
   .container-wide {
-    @apply mx-auto w-full max-w-container px-5 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8;
   }
 
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-28;
+    @apply py-14 sm:py-20 lg:py-28;
   }
 
   .text-balance {
@@ -52,7 +54,7 @@
 
 @layer utilities {
   .text-gradient-gold {
-    @apply bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-antique-gold to-antique-gold-600 bg-clip-text text-transparent;
   }
 
   .bg-grain {

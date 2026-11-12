@@ -9,7 +9,7 @@ interface FormEmbedProps {
 export default function FormEmbed({ src, title, height = "640px" }: FormEmbedProps) {
   return (
     <div className="overflow-hidden rounded-2xl bg-white shadow-card ring-1 ring-cloud-dark">
-      <div className="flex items-center justify-between border-b border-cloud-dark px-5 py-3">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-cloud-dark px-4 py-3 sm:px-5">
         <p className="text-sm font-semibold text-navy-700">{title}</p>
         <a
           href={src}
@@ -24,8 +24,8 @@ export default function FormEmbed({ src, title, height = "640px" }: FormEmbedPro
       <iframe
         src={src}
         title={title}
-        className="w-full"
-        style={{ height, border: 0 }}
+        className="h-[520px] w-full sm:h-[640px]"
+        style={height !== "640px" ? { height, border: 0 } : { border: 0 }}
         loading="lazy"
       >
         <p className="p-6 text-ink-light">

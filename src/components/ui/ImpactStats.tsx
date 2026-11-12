@@ -35,12 +35,12 @@ function AnimatedCounter({ value, suffix, raw }: { value: number; suffix: string
 /** Standalone stat grid: parent section controls background and vertical spacing. */
 export default function ImpactStats({ light = false }: { light?: boolean }) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4">
       {impactStats.map((stat, index) => (
-        <div key={`${stat.label}-${index}`} className={`rounded-[26px] border p-7 sm:p-8 ${light ? "border-white/10 bg-white/10" : "border-[#E9E4F2] bg-white shadow-[0_12px_40px_rgba(23,13,46,0.04)]"}`}>
-          <div className={`text-4xl font-black tracking-[-0.06em] sm:text-5xl ${light ? "text-[#D7FF35]" : "text-[#713BFF]"}`}><AnimatedCounter value={stat.value} suffix={stat.suffix} raw={stat.raw} /></div>
-          <h3 className={`mt-5 text-sm font-extrabold uppercase tracking-[0.1em] ${light ? "text-white" : "text-[#170D2E]"}`}>{stat.label}</h3>
-          {stat.description && <p className={`mt-2 text-sm leading-6 ${light ? "text-white/70" : "text-[#625D70]"}`}>{stat.description}</p>}
+        <div key={`${stat.label}-${index}`} className={`rounded-[24px] border p-6 sm:rounded-[26px] sm:p-8 ${light ? "border-white/10 bg-white/10" : "border-blue-smoke-100 bg-white shadow-[0_12px_40px_rgba(14,58,134,0.04)]"}`}>
+          <div className={`text-3xl font-black tracking-[-0.06em] min-[400px]:text-4xl sm:text-5xl ${light ? "text-fresh-yellow" : "text-clear-sky-600"}`}><AnimatedCounter value={stat.value} suffix={stat.suffix} raw={stat.raw} /></div>
+          <h3 className={`mt-5 text-sm font-extrabold uppercase tracking-[0.1em] ${light ? "text-white" : "text-blue-smoke-900"}`}>{stat.label}</h3>
+          {stat.description && <p className={`mt-2 text-sm leading-6 ${light ? "text-white/75" : "text-ink-light"}`}>{stat.description}</p>}
         </div>
       ))}
     </div>

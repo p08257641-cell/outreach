@@ -28,8 +28,8 @@ export default function SectionHeading({
       {eyebrow && (
         <p
           className={cn(
-            "mb-3 text-sm font-semibold uppercase tracking-widest text-gold-600",
-            light && "text-gold-300"
+            "mb-3 text-sm font-semibold uppercase tracking-widest text-antique-gold-700",
+            light && "text-antique-gold-300"
           )}
         >
           {eyebrow}
@@ -37,7 +37,7 @@ export default function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-3xl font-bold sm:text-4xl lg:text-[2.5rem]",
+          "text-2xl font-bold min-[400px]:text-3xl sm:text-4xl lg:text-[2.5rem]",
           light && "text-white"
         )}
       >
@@ -46,7 +46,7 @@ export default function SectionHeading({
       {subtitle && (
         <p
           className={cn(
-            "mt-4 text-lg leading-relaxed",
+            "mt-3 text-base leading-relaxed sm:mt-4 sm:text-lg",
             light ? "text-navy-100" : "text-ink-light"
           )}
         >

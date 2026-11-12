@@ -1,4 +1,3 @@
-
 import {
   Phone,
   Mail,
@@ -43,9 +42,9 @@ export default function SiteFooter() {
   };
 
   return (
-    <footer className="bg-navy-900 text-navy-100">
-      <div className="container-wide py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="bg-blue-smoke-900 text-blue-smoke-100">
+      <div className="container-wide py-12 sm:py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-12">
 
           {/* Organization Information */}
           <div>
@@ -67,7 +66,7 @@ export default function SiteFooter() {
               </Link>
             </div>
 
-            <p className="max-w-sm text-sm leading-7 text-navy-200">
+            <p className="max-w-sm text-sm leading-7 text-blue-smoke-200">
               {siteConfig.shortDescription}
             </p>
 
@@ -80,7 +79,7 @@ export default function SiteFooter() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-navy-800 text-navy-200 transition duration-300 hover:-translate-y-1 hover:bg-[#713BFF] hover:text-white"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-smoke text-blue-smoke-100 transition duration-300 hover:-translate-y-1 hover:bg-clear-sky hover:text-white"
                 >
                   <social.icon
                     className="h-5 w-5"
@@ -99,11 +98,11 @@ export default function SiteFooter() {
 
             <ul className="space-y-3 text-sm">
               {footerNav.explore.map((link) => (
-                <li key={link.to}>
+                <li key={`${link.label}-${link.to}`}>
                   <Link
                     to={link.to}
                     onClick={() => scrollSameSection(link.to)}
-                    className="text-navy-200 transition duration-200 hover:text-[#D7FF35]"
+                    className="text-blue-smoke-200 transition duration-200 hover:text-fresh-yellow"
                   >
                     {link.label}
                   </Link>
@@ -120,11 +119,11 @@ export default function SiteFooter() {
 
             <ul className="space-y-3 text-sm">
               {footerNav.resources.map((link) => (
-                <li key={link.to}>
+                <li key={`${link.label}-${link.to}`}>
                   <Link
                     to={link.to}
                     onClick={() => scrollSameSection(link.to)}
-                    className="text-navy-200 transition duration-200 hover:text-[#D7FF35]"
+                    className="text-blue-smoke-200 transition duration-200 hover:text-fresh-yellow"
                   >
                     {link.label}
                   </Link>
@@ -139,10 +138,10 @@ export default function SiteFooter() {
               Contact
             </h3>
 
-            <ul className="space-y-4 text-sm text-navy-200">
+            <ul className="space-y-4 text-sm text-blue-smoke-200">
               <li className="flex items-start gap-3">
                 <MapPin
-                  className="mt-0.5 h-4 w-4 shrink-0 text-[#D7FF35]"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-fresh-yellow"
                   aria-hidden="true"
                 />
                 <span>{siteConfig.contact.address}</span>
@@ -150,7 +149,7 @@ export default function SiteFooter() {
 
               <li className="flex items-start gap-3">
                 <Phone
-                  className="mt-0.5 h-4 w-4 shrink-0 text-[#D7FF35]"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-fresh-yellow"
                   aria-hidden="true"
                 />
                 <a
@@ -163,7 +162,7 @@ export default function SiteFooter() {
 
               <li className="flex items-start gap-3">
                 <Mail
-                  className="mt-0.5 h-4 w-4 shrink-0 text-[#D7FF35]"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-fresh-yellow"
                   aria-hidden="true"
                 />
                 <a
@@ -179,8 +178,8 @@ export default function SiteFooter() {
         </div>
 
         {/* Footer Bottom */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-navy-800 pt-8 sm:flex-row">
-          <p className="text-center text-sm text-navy-300 sm:text-left">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-blue-smoke pt-8 sm:flex-row">
+          <p className="text-center text-sm text-blue-smoke-300 sm:text-left">
             © {year} {siteConfig.name}. All rights reserved.
           </p>
 
@@ -188,7 +187,7 @@ export default function SiteFooter() {
             type="button"
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="flex items-center gap-2 rounded-full bg-navy-800 px-5 py-2.5 text-sm text-navy-200 transition duration-300 hover:bg-[#713BFF] hover:text-white"
+            className="flex items-center gap-2 rounded-full bg-blue-smoke px-5 py-2.5 text-sm text-blue-smoke-100 transition duration-300 hover:bg-clear-sky hover:text-white"
           >
             <ArrowUp className="h-4 w-4" aria-hidden="true" />
             Back to top

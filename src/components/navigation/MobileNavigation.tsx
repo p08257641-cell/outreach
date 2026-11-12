@@ -1,4 +1,3 @@
-
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
@@ -134,7 +133,7 @@ export default function MobileNavigation() {
         aria-label="Open navigation menu"
         aria-expanded={open}
         aria-controls={dialogId}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[#170D2E]/10 text-[#170D2E] transition hover:bg-[#F5F3FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#713BFF] lg:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-blue-smoke/15 text-blue-smoke-900 transition hover:bg-blue-smoke-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clear-sky lg:hidden"
       >
         <Menu className="h-6 w-6" aria-hidden="true" />
       </button>
@@ -151,7 +150,7 @@ export default function MobileNavigation() {
             {/* Backdrop */}
             <button
               type="button"
-              className="absolute inset-0 h-full w-full cursor-default bg-[#10071F]/75 backdrop-blur-sm"
+              className="absolute inset-0 h-full w-full cursor-default bg-blue-smoke-950/75 backdrop-blur-sm"
               aria-label="Close navigation"
               onClick={() => setOpen(false)}
             />
@@ -159,10 +158,10 @@ export default function MobileNavigation() {
             {/* Slide-out Panel */}
             <div
               ref={panelRef}
-              className="absolute inset-y-0 right-0 flex w-[min(88vw,390px)] flex-col overflow-y-auto bg-white shadow-2xl"
+              className="absolute inset-y-0 right-0 flex h-dvh w-[min(88vw,390px)] flex-col overflow-y-auto bg-white shadow-2xl"
             >
               {/* Header */}
-              <div className="flex items-center justify-between border-b border-[#170D2E]/10 px-6 py-5">
+              <div className="flex items-center justify-between border-b border-blue-smoke/10 px-5 py-4 sm:px-6 sm:py-5">
                 <Link
                   to="/"
                   onClick={(event) =>
@@ -176,7 +175,7 @@ export default function MobileNavigation() {
                     alt="Ephesus School Outreach"
                     width={180}
                     height={64}
-                    className="h-12 w-auto max-w-[180px] object-contain"
+                    className="h-10 w-auto max-w-[150px] object-contain sm:h-12 sm:max-w-[180px]"
                   />
                 </Link>
 
@@ -185,14 +184,14 @@ export default function MobileNavigation() {
                   type="button"
                   aria-label="Close navigation menu"
                   onClick={() => setOpen(false)}
-                  className="grid h-10 w-10 place-items-center rounded-xl bg-[#F5F3FF] text-[#170D2E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#713BFF]"
+                  className="grid h-10 w-10 place-items-center rounded-xl bg-blue-smoke-50 text-blue-smoke-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-clear-sky"
                 >
                   <X className="h-5 w-5" aria-hidden="true" />
                 </button>
               </div>
 
               {/* Section Label */}
-              <div className="px-6 pb-2 pt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#713BFF]">
+              <div className="px-6 pb-2 pt-7 text-xs font-bold uppercase tracking-[0.2em] text-clear-sky-600">
                 Explore
               </div>
 
@@ -211,10 +210,10 @@ export default function MobileNavigation() {
                     aria-current={
                       isActive(item.to) ? "page" : undefined
                     }
-                    className={`rounded-xl px-4 py-3 text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#713BFF] ${
+                    className={`rounded-xl px-4 py-3 text-base font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-clear-sky ${
                       isActive(item.to)
-                        ? "bg-[#F0EBFF] text-[#713BFF]"
-                        : "text-[#170D2E] hover:bg-[#F5F3FF] hover:text-[#713BFF]"
+                        ? "bg-clear-sky-100 text-clear-sky-600"
+                        : "text-blue-smoke-900 hover:bg-blue-smoke-50 hover:text-clear-sky-600"
                     }`}
                   >
                     {item.label}
@@ -223,13 +222,13 @@ export default function MobileNavigation() {
               </nav>
 
               {/* Get Involved CTA */}
-              <div className="mt-auto border-t border-[#170D2E]/10 px-6 py-6">
+              <div className="mt-auto border-t border-blue-smoke/10 px-6 py-6">
                 <Link
                   to={ctaNav.to}
                   onClick={(event) =>
                     handleNavigate(event, ctaNav.to)
                   }
-                  className="flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#713BFF] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#8257FF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#713BFF]"
+                  className="flex min-h-12 items-center justify-center gap-2 rounded-full bg-clear-sky px-6 py-3 text-sm font-bold text-white transition hover:bg-clear-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-clear-sky"
                 >
                   {ctaNav.label}
                   <ArrowUpRight
@@ -238,7 +237,7 @@ export default function MobileNavigation() {
                   />
                 </Link>
 
-                <p className="mt-4 text-center text-xs text-[#6B627C]">
+                <p className="mt-4 text-center text-xs text-ink-light">
                   Inspiring faith. Changing lives.
                 </p>
               </div>
