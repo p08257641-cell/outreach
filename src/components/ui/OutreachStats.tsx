@@ -1,12 +1,11 @@
 import { motion, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-// Figures transcribed from the reference screenshot; verify before publishing.
 const stats = [
-  { value: 6, label: "Schools Reached", description: "Reaching students across the region" },
-  { value: 5500, label: "People Reached", description: "Lives touched through our programs" },
-  { value: 1350, label: "Souls Won", description: "Lives responding to the gospel" },
-  { value: 1250, label: "Bibles Distributed", description: "Sharing the Word of God" },
+  { value: 4, label: "Schools Reached", description: "Reaching students across the region" },
+  { value: 6, label: "Outreaches", description: "Lives touched through our programs" },
+  { value: 2856, label: "Bibles Shared", description: "Sharing the Word of God" },
+  { value: 3003, label: "Recorded Decisions for Christ", description: "Lives responding to the gospel" },
 ];
 
 function Counter({ value }: { value: number }) {
