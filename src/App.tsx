@@ -4,6 +4,8 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Gallery from "@/pages/Gallery";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/NotFound";
 
@@ -16,6 +18,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

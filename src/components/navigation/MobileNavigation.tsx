@@ -120,7 +120,10 @@ export default function MobileNavigation() {
       );
     }
 
-    return location.pathname === destination;
+    return (
+      location.pathname === destination ||
+      location.pathname.startsWith(`${destination}/`)
+    );
   };
 
   return (

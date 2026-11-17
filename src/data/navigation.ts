@@ -4,6 +4,7 @@ export const mainNav: NavItem[] = [
   { label: "About", to: "/#about", anchor: true },
   { label: "Programs", to: "/#programs", anchor: true },
   { label: "Gallery", to: "/gallery" },
+  { label: "Blog", to: "/blog" },
   { label: "Events", to: "/#events", anchor: true },
   { label: "Resources", to: "/#resources", anchor: true },
   { label: "Testimonies", to: "/#testimonies", anchor: true },
@@ -13,6 +14,7 @@ export const ctaNav: NavItem = { label: "Get Involved", to: "/#join", anchor: tr
 export const footerNav = {
   explore: mainNav,
   resources: [
+    { label: "Message Summaries", to: "/blog" },
     { label: "Listen", to: "/#resources" },
     { label: "Discover Your Purpose", to: "/#about" },
     { label: "Ask a Question", to: "/contact" },

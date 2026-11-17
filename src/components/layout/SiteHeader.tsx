@@ -122,7 +122,11 @@ export default function SiteHeader() {
       return active === "/";
     }
 
-    return active === destination;
+    if (destination.startsWith("/#")) {
+      return active === destination;
+    }
+
+    return active === destination || active.startsWith(`${destination}/`);
   };
 
   return (
